@@ -126,7 +126,7 @@ body{
     flex-direction: column;
     overflow-y: scroll;
 }
-.contact{
+.chatlist-contact{
     min-height: 80px;
     align-items: center;
     border-bottom: 1px solid #eaeaea;

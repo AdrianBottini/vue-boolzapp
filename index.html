@@ -38,7 +38,7 @@
                 </div>
                 <div class="notifiche-text">
                     <h4>Ricevi notifiche di nuovi messaggi</h4>
-                    <a href="">Attiva notifiche desktop</a>
+                    <a href=""></a>
                 </div>
             </div>
             <div class="search-section">
@@ -47,7 +47,7 @@
             </div>
             <div class="chatlist-section">
                 <div v-for="(contact, i) in contacts" class="chatlist-contact" :class="{visible: contact.visible}" @click="selectedChat(i)">
-                    <img :src="'img/avatar' + contact.avatar + '.jpg" class="contact-picture">
+                    <img :src="'img/avatar' + contact.avatar + '.jpg'" class="contact-picture">
                     <div class="contact-info">
                         <h4 class="contact-name">{{ contact.name }}</h4>
                         <div class="contact-last-message">{{ contact.messages[contact.messages.length - 1].message }}</div>
