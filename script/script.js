@@ -164,13 +164,13 @@ new Vue({
                 ],
             },
         ],
-        currentChat: 0,
+        miaChat: 0,
         newMsg: '',
         research: '',
     },
     methods: {
         selectedChat(index){
-            this.currentChat = index;
+            this.miaChat = index;
         },
         sendMsg(){
             if(this.newMsg.trim()) {
@@ -179,7 +179,7 @@ new Vue({
                     message: this.newMsg.trim(),
                     status: 'sent',
                 }
-                this.contacts[this.currentChat].messages.push(newObjMsg);
+                this.contacts[this.miaChat].messages.push(newObjMsg);
                 this.newMsg = '';
                 setTimeout(this.receiveMsg, 1000);
             }
@@ -190,7 +190,7 @@ new Vue({
                 message: 'Ok',
                 status: 'received',
             }
-            this.contacts[this.currentChat].messages.push(newObjMsg);
+            this.contacts[this.miaChat].messages.push(newObjMsg);
         },
         searchContact(){
             for(let i=0; i<this.contacts.length; i++){
