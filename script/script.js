@@ -181,7 +181,6 @@ new Vue({
                 }
                 this.contacts[this.currentChat].messages.push(newObjMsg);
                 this.newMsg = '';
-
                 setTimeout(this.receiveMsg, 1000);
             }
         },
@@ -202,7 +201,12 @@ new Vue({
                     this.contacts[i].visible = false
                 }
             }
-        }
+        },
+        // filter() {
+        //     this.contacts.forEach(ele, i) => {
+        //         if (!this.contacts[i].name.toLowerCase())
+        //     };
+        // }
     }
 })
 
