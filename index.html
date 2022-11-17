@@ -38,12 +38,12 @@
                 </div>
                 <div class="notifiche-text">
                     <h4>Ricevi notifiche di nuovi messaggi</h4>
-                    <a href="">Attiva notifiche dekstop</a>
+                    <a href="#">Attiva notifiche dekstop</a>
                 </div>
             </div>
             <div class="search-section">
                 <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <input type="text" class="search-bar">
+                <input type="text"  v-model='filterName' class="search-bar">
             </div>
             <div class="chatlist-section">
                 <div v-for="(contact, i) in contacts" class="chatlist-contact" :class="{visible: contact.visible}" @click="selectedChat(i)">

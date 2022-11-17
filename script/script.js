@@ -167,6 +167,7 @@ new Vue({
         miaChat: 0,
         newMsg: '',
         research: '',
+        filterName: '',
     },
     methods: {
         selectedChat(index){
@@ -202,8 +203,6 @@ new Vue({
                 }
             }
         },
-
-        
         filter() {
             this.contacts.forEach((ele, i) => {
                 if (!this.contacts[i].name.toLowerCase().includes(this.filterName.toLowerCase())){
