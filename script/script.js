@@ -202,11 +202,17 @@ new Vue({
                 }
             }
         },
-        // filter() {
-        //     this.contacts.forEach(ele, i) => {
-        //         if (!this.contacts[i].name.toLowerCase())
-        //     };
-        // }
-    }
-})
+
+        
+        filter() {
+            this.contacts.forEach((ele, i) => {
+                if (!this.contacts[i].name.toLowerCase().includes(this.filterName.toLowerCase())){
+                    this.contacts[i].visible = false;
+                } else {
+                    this.contacts[i].visible = true
+                }
+            });
+        }
+    },
+});
 
