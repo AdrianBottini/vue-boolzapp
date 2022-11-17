@@ -26,19 +26,19 @@ body{
     left: 10%;
     display: flex;
 }
-.left-section{
-    width: 35%;
+.area-left{
+    width: 40%;
     height: 100%;
 }
-.right-section{
-    width: 65%;
+.area-right{
+    width: 60%;
     height: 100%;
     border-left: 1px solid #b1b1b1;
 }
 
 .user-section{
     width: 100%;
-    height: 7%;
+    height: 10%;
     background-color: #eaeaea;
     display: flex;
     justify-content: space-between;
@@ -82,13 +82,13 @@ body{
     border-radius: 50%;
     margin: 0 1rem;
 }
-.notifiche-text span{
+.notificche-text span{
     font-size: .9rem;
     color: #6994a3;
     text-decoration: underline;
 }
 .bell i{
-    color: #8edafc;
+    color: lightblue;
     font-size: 1.5rem;
 }
 
@@ -128,10 +128,14 @@ body{
 }
 .chatlist-contact{
     min-height: 80px;
-    display: flex;
     align-items: center;
     border-bottom: 1px solid #eaeaea;
     position: relative;
+    cursor: pointer;
+    display: none;
+}
+.visible{
+    display: flex;
 }
 .contact-picture{
     border-radius: 50%;
@@ -140,10 +144,14 @@ body{
 }
 .contact-info{
     margin-bottom: 1rem;
+    width: 75%;
 }
 .contact-last-message{
     font-size: .9rem;
     color: #6994a3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .last-message-time{
     position: absolute;
@@ -158,20 +166,83 @@ body{
     height: 7%;
     background-color: #eaeaea;
     display: flex;
+    padding: 0 5px;
+    justify-content: space-between;
+}
+.receiver-info{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.receiver-info img{
+    border-radius: 50%;
+    height: 80%;
+    margin-right: .5rem;
+}
+.receiver-info-text span{
+    font-size: .9rem;
+    color: #6994a3;
 }
 
 .chat-section{
     width: 100%;
     height: 86%;
     background-color: #e3dcd3;
+    overflow-y: scroll;
+}
+.generic-message{
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.sentmessage{
+    border-radius: 10px;
+    padding: .5rem .5rem .2rem .5rem;
+    background-color: #d5f9ba;
+    width: fit-content;
+    max-width: 80%;
+    margin: 0 2rem 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.receivedmessage{
+    border-radius: 10px;
+    padding: .5rem .5rem .2rem .5rem;
+    background-color: white;
+    width: fit-content;
+    max-width: 80%;
+    margin: 0 auto 0 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.message-time{
+    font-size: .7rem;
+    color: #6994a3;
+    margin-left: 5rem;
+    align-self: flex-end;
+    
 }
 
 .sending-section{
     width: 100%;
     height: 7%;
     background-color: #f3eeea;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 2rem;
 }
 
-.contact-info2 {
-    margin-top: 20px;
+.sending-section i{
+    font-size: 1.5rem;
+    color: #6b747a;
+}
+
+.sending-input{
+    width: 80%;
+    height: 70%;
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+    padding-left: 1rem;
 }
