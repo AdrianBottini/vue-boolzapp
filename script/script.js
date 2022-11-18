@@ -215,3 +215,8 @@ new Vue({
     },
 });
 
+// getNow() {
+//     return luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss');
+// }
+
+
