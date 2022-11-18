@@ -176,7 +176,7 @@ new Vue({
         sendMsg(){
             if(this.newMsg.trim()) {
                 let newObjMsg = {
-                    date: 'da vedere',
+                    date: new Date().toISOString().replaceAll('-','/').replaceAll('T',' ').split('.')[0],
                     message: this.newMsg.trim(),
                     status: 'sent',
                 }
@@ -187,7 +187,7 @@ new Vue({
         },
         receiveMsg(){
             let newObjMsg = {
-                date: 'da vedere',
+                date: new Date().toISOString().replaceAll('-','/').replaceAll('T',' ').split('.')[0],
                 message: 'Ok',
                 status: 'received',
             }

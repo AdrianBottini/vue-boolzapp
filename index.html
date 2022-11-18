@@ -72,11 +72,10 @@
                 </div>
             </div>
             <div class="chat-section">
-
                 <div v-for="msg in contacts[miaChat].messages" class="generic-message">
                     <div :class="{sentmessage: msg.status === 'sent', receivedmessage: msg.status === 'received'}">
                         <span class="message-text">{{ msg.message }}</span>
-                        <span class="message-time">12:00</span>
+                        <span class="message-time">{{ msg.date }}</span>
                     </div>
                 </div>
             </div>
