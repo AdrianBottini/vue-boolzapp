@@ -43,7 +43,7 @@
             </div>
             <div class="search-section">
                 <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <input type="text"  v-model='filterName' class="search-bar">
+                <input type="text"  v-model='filterName' @keyup="filter" class="search-bar">
             </div>
             <div class="chatlist-section">
                 <div v-for="(contact, i) in contacts" class="chatlist-contact" :class="{visible: contact.visible}" @click="selectedChat(i)">

@@ -205,7 +205,7 @@ new Vue({
         },
         filter() {
             this.contacts.forEach((ele, i) => {
-                if (!this.contacts[i].name.toLowerCase().includes(this.filterName.toLowerCase())){
+                if (!this.contacts[i].name.toLowerCase().trim.includes(this.filterName.toLowerCase().trim)){
                     this.contacts[i].visible = false;
                 } else {
                     this.contacts[i].visible = true
