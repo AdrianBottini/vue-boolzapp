@@ -193,16 +193,6 @@ new Vue({
             }
             this.contacts[this.miaChat].messages.push(newObjMsg);
         },
-        searchContact(){
-            for(let i=0; i<this.contacts.length; i++){
-                if(this.research === this.contacts[i].name.slice(0, this.research.length)){
-                    this.contacts[i].visible = true
-                }
-                else{
-                    this.contacts[i].visible = false
-                }
-            }
-        },
         filter() {
             this.contacts.forEach((ele, i) => {
                 if (!this.contacts[i].name.toLowerCase().trim.includes(this.filterName.toLowerCase().trim)){
